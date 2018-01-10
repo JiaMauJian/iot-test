@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="283"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/23086$wcuKEfVl55J</title>
+</head>
+<body><h1>ST7920</h1><h2>安裝步驟及程式</h2><p><b>Step 1 :下載u8glib (for Arduino v1.17)</b></p><ul style="list-style: none;"><li><a href="https://bintray.com/artifact/download/olikraus/u8glib/u8glib_arduino_v1.17.zip"></a>https://bintray.com/<a href='https://bintray.com/olikraus/u8glib'/>artifact/download/olikraus/u8glib/u8glib_arduino_v1.17.zip</a></li></ul>
+
+<p><b>Step 2 : 安裝Arduino IDE，然後import u8glib</b></p><ul><li>Arduino (Installation with IDE)<ul><li>Start Arduino IDE <a href="http://arduino.cc/download.php?f=/arduino-1.0.6-windows.exe"></a>http://arduino.cc/download.php?f=/arduino-1.0.6-windows.exe</li>
+<li>In the Arduino IDE, import the library from the &quot;Add Library&quot; Menu.</li></ul>
+</ul>
+
+<p><b>Step 3 : How to connect a display</b></p><ul style="list-style: none;"><li><b>&nbsp;</b><a href='https://code.google.com/p/u8glib/wiki/tdisplaysetup'/>Tutorial: How to connect a display</a> 參考用</li></ul>
+
+<p><b>Step 4 : Hello World</b></p><p>Theory</p><p>Once the display is physically connected to an Arduino Board <b>three steps</b> are required to bring some graphics on the display:</p><ul><li>Call an U8glib constructor (selected from <a href='https://code.google.com/p/u8glib/wiki/device'/>here</a>)</li>
+<li>Add the &quot;picture loop&quot;</li>
+<li>Write a graphics &quot;draw&quot; procedure</li></ul>
+
+<h2>範例程式如下 : </h2><p>ST7920建構子說明 U8GLIB_ST7920_128X64_1X(sck, mosi, cs [, reset])</p><ul><li>Pin Names (腳位名稱，請問岡錦什麼意思?)<ul><li><b>sck</b>: Clock</li>
+<li><b>mosi</b>: Serial data</li>
+<li><b>cs</b>, <b>cs1</b>, <b>cs2</b>: Chip select, datasheet names: CS, CS1, CS2 or CE</li>
+<li><b>a0</b>, <b>di</b>: Data/instruction register select, datasheet names: A0, DI, CD or RS</li>
+<li><b>rw</b>: Read/write line</li>
+<li><b>en</b>: Read/write enable</li>
+<li><b>d0</b> - <b>d7</b>: Parallel data</li>
+<li><b>reset</b>: Display reset</li></ul>
+</li>
+<li>LCD Modules with ST7920 Controller (串列模式或是並列模式，請問岡錦什麼意思?)<ul><li>Serial mode (PSB = LOW)<ul><li><b>sck</b>: Pin with label &quot;E&quot;</li>
+<li><b>mosi</b>: Pin with label &quot;RW&quot;</li>
+<li><b>cs</b>: Pin with label &quot;RS&quot;.</li>
+<li>Example: U8GLIB_ST7920_128X64_1X(sck, mosi, cs [, reset]) is equivalent to U8GLIB_ST7920_128X64_1X(E, RW, RS, RST) for many display modules.</li></ul>
+</li>
+<li>Parallel mode (PSB = HIGH)<ul><li><b>en</b>: Pin with label &quot;E&quot;</li>
+<li><b>di</b>: Pin with label &quot;RS&quot;</li>
+<li><b>rw</b>: Pin with label &quot;RW&quot;</li></ul>
+</ul>
+</ul>
+
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_wcuKEfVl55J_p.301017_1419987520357_undefined'/></p><p><b>1</b>.呼叫建構子</p><ul class="code"><li>U8GLIB_ST7920_128X64_1X u8g(13, 11, 10, 9); // SPI Com: SCK = en = 13, MOSI = rw = 11, CS = di = 10, Reset = 9</li></ul>
+<p><b>2</b>.跑Picture Loop</p><ul class="code"><li>void loop(void) {</li>
+<li>&nbsp; // picture loop</li>
+<li>&nbsp; u8g.firstPage();&nbsp;&nbsp;</li>
+<li>&nbsp; do {</li>
+<li>&nbsp;&nbsp;&nbsp; draw();</li>
+<li>&nbsp; } while( u8g.nextPage() );</li>
+<li>&nbsp;&nbsp;</li>
+<li>&nbsp; // rebuild the picture after some delay</li>
+<li>&nbsp; delay(1000);</li>
+<li>}</li></ul>
+<p><b>3</b>.Graphics Output輸出</p><ul class="code"><li>void draw(void) {</li>
+<li>&nbsp; // graphic commands to redraw the complete screen should be placed here&nbsp;&nbsp;</li>
+<li>&nbsp; u8g.setFont(u8g_font_unifont);</li>
+<li>&nbsp; u8g.drawStr( 0, 20, &quot;Hello World!&quot;);</li>
+<li>}</li></ul>
+
+<ul><li><a href='https://code.google.com/p/u8glib/'/>u8glib</a> for ST7920 128x64</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_wcuKEfVl55J_p.301017_1419986321736_undefined'/></p><p>Dec 2013, I activated an inexpensive ($9) ST7920 based display module. Setup for this display is:</p><ul class="code"><li>U8GLIB_ST7920_128X64_1X u8g(13, 11, 10, 9); // SPI Com: SCK = en = 13, MOSI = rw = 11, CS = di = 10, Reset = 9</li></ul>
+<p>There was almost no documentation, so I had to guess the backlight resistor. 150 Ohm seem to be ok with 5V.</p><p></p><h2>Font and String Handling (這部分是字型大小的調整，岡錦不用理會)</h2><p><a href="https://code.google.com/p/u8glib/wiki/tstring"></a>https://code.google.com/p/u8glib/wiki/tstring</p><p></p></body>
+</html>
