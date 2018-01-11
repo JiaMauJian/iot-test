@@ -11,7 +11,9 @@
 * 或像是要用[電阻來降藍芽模組RX腳位的電壓](https://swf.com.tw/?p=705) (我測試藍芽時，沒將Arduino 5V降壓而是直接使用3.3V腳位)
 
 # Multi-tasking the Arduino
-02_FlashWithoutDelay.cpp，這是另一種狀態改變的手法，可依照狀態時間長短改變，如亮個250ms，暗個750ms
+* 多工的進化過程: delay() -> clock-watcher -> interrupt
+
+* 02_FlashWithoutDelay.cpp，這是另一種狀態改變的手法，可依照狀態時間長短改變，如亮個250ms，暗個750ms
 
 不過我覺得這個方式用在多種狀態下，更能凸顯該方法，如狀態1要500ms, 狀態2要1000ms, 狀態3要300ms...
 
@@ -32,3 +34,6 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
    We also have code that looks at the state and decides when and how it needs to change.  
    That is the "Machine" part.  
    Every time through the loop we ‘run the machine’ and the machine takes care of updating the state.
+  
+* What is an Interrupt?
+  - An interrupt is a signal that tells the processor to immediately stop what it is doing and handle some high priority processing.
