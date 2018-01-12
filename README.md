@@ -10,7 +10,7 @@
 * 不要小看這小小的範例，有些觀念很重要，如歐姆定律還有為什麼一定要加電阻 [Electronic Basics #8](https://www.youtube.com/watch?v=Qlayua3yjuE)
 * 或像是要用[電阻來降藍芽模組RX腳位的電壓](https://swf.com.tw/?p=705) (我測試藍芽時，沒將Arduino 5V降壓而是直接使用3.3V腳位)
 
-# Multi-tasking the Arduino
+# Multi-tasking the Arduino [傳神](https://s3.amazonaws.com/learn-production/guides/images/000/000/799/medium800/368px-One_man_band__CDV_by_Knox__c1865.JPG?1448301986)
 * 多工的進化過程: delay() -> clock-watcher -> interrupt
 
 * 02_FlashWithoutDelay.cpp，這是另一種狀態改變的手法，可依照狀態時間長短改變，如亮個250ms，暗個750ms
