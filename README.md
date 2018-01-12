@@ -14,6 +14,7 @@
 * [一張圖表達Multi-tasking](https://s3.amazonaws.com/learn-production/guides/images/000/000/799/medium800/368px-One_man_band__CDV_by_Knox__c1865.JPG?1448301986)
 
 * 多工的進化過程: delay() -> clock-watcher -> interrupt
+  - 除非真的有很即時性的需求，在用中斷，不然我覺得clock-watcher的程式模式已經很棒了
 
 * 02_FlashWithoutDelay.cpp，這是另一種狀態改變的手法，可依照狀態時間長短改變，如亮個250ms，暗個750ms
 
