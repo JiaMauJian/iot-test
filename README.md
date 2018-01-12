@@ -62,3 +62,7 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
 * 中斷參考網址
   - https://www.robotshop.com/letsmakerobots/arduino-101-timers-and-interrupts
   - http://www.instructables.com/id/Arduino-Timer-Interrupts/
+  
+* 認識與實驗Arduino的睡眠模式
+  - [Arduino的睡眠模式](https://swf.com.tw/?p=525)
+  - [量電流](http://www.electrodragon.com/measure-a-system-current-consumption-draw-arduino-in-case/)
