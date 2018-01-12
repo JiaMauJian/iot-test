@@ -36,4 +36,22 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
    Every time through the loop we ‘run the machine’ and the machine takes care of updating the state.
   
 * What is an Interrupt?
-  - An interrupt is a signal that tells the processor to immediately stop what it is doing and handle some high priority processing.
+  - An interrupt is a signal that tells the processor to immediately stop what it is doing and handle some high priority processing.  
+  
+* TIMSK0.pptx
+
+* 使用 Output Compare Match 的方式來執行中斷 (看影片聽講解比較快懂 https://www.youtube.com/watch?v=n0MNraPWQYo)
+
+* 如何計算OCR0X (Output Compare Register)
+  - Arduino Uno的系統時脈(system clock)為16MHz，1秒tick 16,000,000次，反過來說1個tick只要62.5ns(1/16,000,000)
+  - 如果要從0數到255 (timer0 is a 8-bit timer)就需要16000ns(256/16,000,000)
+  - 以上對我們來說都"太快了"，如果我們需要1ms中斷一次要怎麼實現?
+  - 首先用prescale先降速，選64MHz，16,000,000 / 64,000 = 250MHz，反過來說1個tick要400ns (1/250,000 = 0.000004 second to increment once)
+  - 0.001s = x * 0.000004 => x = 250 => 249 (因為是從0開始數所以要-1)
+  - 就設成OCR0A = 249
+  - prescale要慎選，如果最後結果超過255，就要選用timer1 (timer1 is a 16-bit timer)
+
+
+* 中斷參考網址
+  - https://www.robotshop.com/letsmakerobots/arduino-101-timers-and-interrupts
+  - http://www.instructables.com/id/Arduino-Timer-Interrupts/
