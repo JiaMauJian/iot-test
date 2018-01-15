@@ -43,7 +43,9 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
   
 * TIMSK0.pptx
 
-* 使用 Output Compare Match 的方式來執行中斷 (看影片聽講解比較快懂 https://www.youtube.com/watch?v=n0MNraPWQYo)
+* 使用 Output Compare Match 的方式來執行中斷
+  - [Going beyond Arduino](https://www.youtube.com/watch?v=n0MNraPWQYo)
+  - [Electronic Basics #30 Timer](https://www.youtube.com/watch?v=IdL0_ZJ7V2s) 這個講得很清楚
 
 * 如何計算OCR0X (Output Compare Register)
   - Arduino Uno的系統時脈(system clock)為16MHz，1秒tick 16,000,000次，反過來說1個tick只要62.5ns(1/16,000,000)
