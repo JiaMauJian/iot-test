@@ -38,7 +38,7 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
    That is the "Machine" part.  
    Every time through the loop we ‘run the machine’ and the machine takes care of updating the state.
   
-* What is an Interrupt?
+# Interrupt?
   - An interrupt is a signal that tells the processor to immediately stop what it is doing and handle some high priority processing.  
 
 * TIMSK0.pptx
@@ -62,7 +62,7 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
  
 * Interrupt (Output Compare)
  - 04_Timer1OutputCompare(程式有詳解)
-  
-* 認識與實驗Arduino的睡眠模式
+  
+# 認識與實驗Arduino的睡眠模式
   - [Arduino的睡眠模式](https://swf.com.tw/?p=525)
   - [量電流](http://www.electrodragon.com/measure-a-system-current-consumption-draw-arduino-in-case/)
