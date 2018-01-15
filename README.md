@@ -38,30 +38,26 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
    That is the "Machine" part.  
    Every time through the loop we ‘run the machine’ and the machine takes care of updating the state.
   
-# Interrupt?
+# Interrupt
   - An interrupt is a signal that tells the processor to immediately stop what it is doing and handle some high priority processing.  
 
 * TIMSK0.pptx
 
-* 使用Timer方式來執行中斷
-  - [Going beyond Arduino](https://www.youtube.com/watch?v=n0MNraPWQYo)
-  - [Electronic Basics #30 Timer](https://www.youtube.com/watch?v=IdL0_ZJ7V2s) 這個講得很清楚
+* 使用Timer方式來執行中斷，[Electronic Basics #30 Timer](https://www.youtube.com/watch?v=IdL0_ZJ7V2s) 這個講得很清楚
 
 * 怎麼看Datasheet
  - [ATmega328 block diagram TC0/TC1/TC2](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=13)
  - [TC1 - 16-bit Timer/Counter1 with PWM](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=149) TC1 Timer有PWM功能，我們先試試最簡單的Normal Mode
  - [Normal Mode](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=161) Normal Mode設定TCCR1A.WGM1[3:0]=0x0，是0數到65535，超過時便會觸發Overflow中斷
- - TCCR1A.WGM1[3:0]=0x0意思是TCCR1A.WGM10, 11, 12, 13都設為0 [Waveform Generation Mode Bit Description] (http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=171)
+ - TCCR1A.WGM1[3:0]=0x0意思是TCCR1A.WGM10, 11, 12, 13都設為0 [Waveform Generation Mode Bit Description](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=171)
  - WGM10, 11在[TCCR1A](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=170)
  - WGM12, 13在[TCCR1B](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=173)
  - prescaler選用[Clock Select Bit Description](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=173)
  - 把timer overflow功能打開 [TOIE](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=184)
  
-* Interrupt (OverFlow)
- - 04_Timer1OverFlow(程式有詳解)
+* Interrupt (OverFlow) - 04_Timer1OverFlow(程式有詳解)
  
-* Interrupt (Output Compare)
- - 04_Timer1OutputCompare(程式有詳解)
+* Interrupt (Output Compare) - 04_Timer1OutputCompare(程式有詳解)
   
 # 認識與實驗Arduino的睡眠模式
   - [Arduino的睡眠模式](https://swf.com.tw/?p=525)
