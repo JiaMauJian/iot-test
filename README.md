@@ -64,7 +64,7 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
  3. Interrupt (Output Compare) - 04_Timer1OutputCompare(程式有詳解)
 
 # Timer1 Interrupt (Fast PWM, 8-bit)
- 1. [Compare Output Mode, Fast PWM](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=171)Set OC1A/OC1B on Compare Match, clear OC1A/OC1B at BOTTOM (inverting mode)
+ 1. [Compare Output Mode, Fast PWM](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=171)Clear OC1A/OC1B on Compare Match, set OC1A/OC1B at BOTTOM (non-inverting mode)
  2. OC1A = pin9 / OC1B = pin10
  3. 跟CTC Mode很像，只是TCNT1的最大值是到255，Mode 5，Top = 0x00FF(http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=172)
 
