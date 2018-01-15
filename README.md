@@ -40,31 +40,28 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
   
 * What is an Interrupt?
   - An interrupt is a signal that tells the processor to immediately stop what it is doing and handle some high priority processing.  
-  
+
 * TIMSK0.pptx
 
-* 使用 Output Compare Match 的方式來執行中斷
+* 使用Timer方式來執行中斷
   - [Going beyond Arduino](https://www.youtube.com/watch?v=n0MNraPWQYo)
   - [Electronic Basics #30 Timer](https://www.youtube.com/watch?v=IdL0_ZJ7V2s) 這個講得很清楚
 
-* 如何計算OCR0X (Output Compare Register)
-  - Arduino Uno的系統時脈(system clock)為16MHz，1秒tick 16,000,000次，反過來說1個tick只要62.5ns(1/16,000,000)
-  - 如果要從0數到255 (timer0 is a 8-bit timer)就需要16000ns(256/16,000,000)
-  - 以上對我們來說都"太快了"，如果我們需要1ms中斷一次要怎麼實現?
-  - 首先用prescale先降速，選64MHz，16,000,000Hz / 64 = 250,000Hz，反過來說1個tick要400ns (1/250,000 = 0.000004 second to increment once)
-  - 0.001s = x * 0.000004s => x = 250 => 249 (因為是從0開始數所以要-1)
-  - 就設成OCR0A = 249
-  - prescale要慎選，如果最後結果超過255，就要選用timer1 (timer1 is a 16-bit timer)
-
-* 另一個計算OCR0X範例
-  - 如果我們要1秒中斷一次
-  - 16,000,000 / 1024 = 15625Hz (1/15625 = 0.000064 second to increment once)
-  - 1s = x * 0.000064s => x = 15625 => 15624
-  - 超過255選用timer1
-
-* 中斷參考網址
-  - https://www.robotshop.com/letsmakerobots/arduino-101-timers-and-interrupts
-  - http://www.instructables.com/id/Arduino-Timer-Interrupts/
+* 怎麼看Datasheet
+ - [ATmega328 block diagram TC0/TC1/TC2](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=13)
+ - [TC1 - 16-bit Timer/Counter1 with PWM](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=149) TC1 Timer有PWM功能，我們先試試最簡單的Normal Mode
+ - [Normal Mode](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=161) Normal Mode設定TCCR1A.WGM1[3:0]=0x0，是0數到65535，超過時便會觸發Overflow中斷
+ - TCCR1A.WGM1[3:0]=0x0意思是TCCR1A.WGM10, 11, 12, 13都設為0 [Waveform Generation Mode Bit Description] (http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=171)
+ - WGM10, 11在[TCCR1A](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=170)
+ - WGM12, 13在[TCCR1B](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=173)
+ - prescaler選用[Clock Select Bit Description](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=173)
+ - 把timer overflow功能打開 [TOIE](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=184)
+ 
+* Interrupt (OverFlow)
+ - 04_Timer1OverFlow(程式有詳解)
+ 
+* Interrupt (Output Compare)
+ - 04_Timer1OutputCompare(程式有詳解)
   
 * 認識與實驗Arduino的睡眠模式
   - [Arduino的睡眠模式](https://swf.com.tw/?p=525)
