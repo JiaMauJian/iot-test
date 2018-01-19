@@ -82,4 +82,6 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
  - [DC Motor, How it works? 有刷直流馬達](https://www.youtube.com/watch?v=LAtPHANEfQo&t=7s)
  - [Brushless DC Motor, How it works? 無刷直流馬達](https://www.youtube.com/watch?v=bCEiOnuODac&t=10s)
  - [How does a Stepper Motor work? 步進馬達](https://www.youtube.com/watch?v=eyqwLiowZiU)
- - [How do Servo Motors work? 伺服馬達](https://www.youtube.com/watch?v=eyqwLiowZiU)
+ - [第33回 「步進馬達和伺服馬達誰的停止精度比較好？」](https://www.orientalmotor.com.tw/teruyo_det/teruyo_33/)
+ - [第13回 「請告訴我『步進馬達』與『AC伺服馬達』的使用區別？」](https://www.orientalmotor.com.tw/teruyo_det/teruyo_13/)
+ - [步進馬達與伺服馬達的使用區分](http://www.sunholy.com.tw/epaper/NO.114/114.pdf)
