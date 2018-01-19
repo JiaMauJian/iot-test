@@ -77,3 +77,7 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
  - [Electronic Basics #25: Servos and how to use them](https://www.youtube.com/watch?v=J8atdmEqZsc)
  - [SG90入門](https://learn.adafruit.com/adafruit-arduino-lesson-14-servo-motors?view=all)
  - [用555搞PWM](http://davidchensbase.blogspot.tw/2015/05/555-timer-servo-tester.html)
+ 
+# 馬達入門
+ - [DC Motor, How it works? 有刷直流馬達](https://www.youtube.com/watch?v=LAtPHANEfQo&t=7s)
+ - [Brushless DC Motor, How it works? 無刷直流馬達](https://www.youtube.com/watch?v=bCEiOnuODac&t=10s)
