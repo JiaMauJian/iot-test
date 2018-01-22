@@ -93,4 +93,5 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
 # Diode
  - Let's electricity flow in one way direction (防呆接錯正負極)
  - Volt drop (會降壓)
- - 還有一個橋式整流器(Bridge Rectifiers)的應用
+ - 橋式整流器(Bridge Rectifiers)的應用
+ - https://learn.adafruit.com/battery-power-for-led-pixels-and-strips?view=all
