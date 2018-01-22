@@ -85,3 +85,8 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
  - [第33回 「步進馬達和伺服馬達誰的停止精度比較好？」](https://www.orientalmotor.com.tw/teruyo_det/teruyo_33/)
  - [第13回 「請告訴我『步進馬達』與『AC伺服馬達』的使用區別？」](https://www.orientalmotor.com.tw/teruyo_det/teruyo_13/)
  - [步進馬達與伺服馬達的使用區分](http://www.sunholy.com.tw/epaper/NO.114/114.pdf)
+
+# Diode
+ - Let's electricity flow in one way direction (防呆接錯正負極)
+ - Volt drop (會降壓)
+ - 還有一個橋式整流器(Bridge Rectifiers)的應用
