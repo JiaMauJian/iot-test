@@ -1,3 +1,7 @@
+# 電子元件入門
+ - [Collin's Lab](https://www.youtube.com/playlist?list=PLECC9C55893C696A7)
+ - [GreatScott Electronic Basics](https://www.youtube.com/playlist?list=PLAROrg3NQn7cyu01HpOv5BWo217XWBZu0)
+ 
 # PlatformIO Quick Start
 * http://docs.platformio.org/en/latest/quickstart.html
 * 原來不一定要用Arduino IDE也可以將程式寫入Arduino (main.cpp不一定要.ino)
