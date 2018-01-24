@@ -1,4 +1,6 @@
 # Port Registers
+* [Port Registers](https://www.youtube.com/watch?v=648Tx5N9Zoc&t=4s)
+* [Probe接法](https://github.com/JiaMauJian/iot-test/blob/master/Port%20Registers/probe%20pin13.jpg?raw=true)
 * [Arduino Uno Rev3 Schematic 電路圖](https://www.arduino.cc/en/uploads/Main/Arduino_Uno_Rev3-schematic.pdf)
 * [從 Arduino 到 AVR 晶片](http://programmermagazine.github.io/201406/htm/article1.html)
 
