@@ -95,3 +95,13 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
  - Volt drop (會降壓)
  - 橋式整流器(Bridge Rectifiers)的應用
  - https://learn.adafruit.com/battery-power-for-led-pixels-and-strips?view=all
+
+# Register
+ - 如果有考慮以下狀況，可直接使用Register
+ - 更精準的時間控制
+ - 程式太肥，要減少程式記憶體空間 [Arduino Memory](https://www.arduino.cc/en/Tutorial/Memory)
+  
+# Protocol
+ - UART (從Port Register學)
+ - Modbus
+ - SPI (從MCP3008學)
