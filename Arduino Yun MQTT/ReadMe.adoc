@@ -1,1 +1,2 @@
-Arduino Yun當MQTT Client時，要先root進去安裝mosquitto相關Libs [Dependencies](https://github.com/bobbytech/Easy-Arduino-Yun-MQTT-Client)
+* Arduino Yun當MQTT Client時，要先root進去安裝mosquitto相關Libs
+* [Dependencies](https://github.com/bobbytech/Easy-Arduino-Yun-MQTT-Client)
