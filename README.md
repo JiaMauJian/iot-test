@@ -108,6 +108,8 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
 
 # PWM & Registers
  -以Pin9為例，可以用示波器來觀察頻率，預設為490.2Hz，可以用register調整prescaler來調高頻率到31.3KHz
+ -[Adjusting PWM Frequencies](https://playground.arduino.cc/Main/TimerPWMCheatsheet)
+ -[Arduino Basics 103](https://www.youtube.com/watch?v=EVm0qVJ56II&t=8s)11
  ````
  Pins 9 and 10: controlled by timer 1 in phase-correct PWM mode (cycle length = 510)
  Setting 	Divisor 	Frequency
@@ -119,5 +121,3 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
 
  TCCR1B = (TCCR1B & 0b11111000) | <setting>;
  ````
- -[Adjusting PWM Frequencies](https://playground.arduino.cc/Main/TimerPWMCheatsheet)
- -[Arduino Basics 103](https://www.youtube.com/watch?v=EVm0qVJ56II&t=8s)
