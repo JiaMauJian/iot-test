@@ -122,7 +122,7 @@ Flash就是不固定時間長度改變狀態，如OnTime = 250ms, OffTime = 750m
  -- [Adjusting PWM Frequencies](https://playground.arduino.cc/Main/TimerPWMCheatsheet)
  -- [Arduino Basics 103](https://www.youtube.com/watch?v=EVm0qVJ56II&t=8s)
  
-# Pull up
+# Pull up resistor
  - 當pinMode設定為INPUT時，若沒有接pull up電阻到5V，會發現digitalRead有時讀到1有時讀到0 (那不接電阻直接接5V可不可以? 怕板子會燒壞)
  - 哪裡有看過Pull up，按鈕、DS18B20、I2C
  - Floating Pin [vedio1](https://www.youtube.com/watch?v=BxA7qwmY9mg)[vedio2](https://www.youtube.com/watch?v=wxjerCHCEMg)
