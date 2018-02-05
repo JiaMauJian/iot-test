@@ -1,4 +1,5 @@
 # Port Registers
+* [Arduino Basics 103](https://www.youtube.com/watch?v=EVm0qVJ56II&t=8s)
 * [Port Registers](https://www.youtube.com/watch?v=648Tx5N9Zoc&t=4s)
 * [Probe接法](https://github.com/JiaMauJian/iot-test/blob/master/Port%20Registers/probe%20pin13.jpg?raw=true)
 * [Arduino Uno Rev3 Schematic 電路圖](https://www.arduino.cc/en/uploads/Main/Arduino_Uno_Rev3-schematic.pdf)
