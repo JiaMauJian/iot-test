@@ -37,7 +37,9 @@ void setup()
 
 void draw() {  
   u8g.setFont(u8g_font_courB18); // https://github.com/olikraus/u8glib/wiki/fontsize
-  u8g.drawStr( 0, 18, adcResult8); //
+  u8g.drawStr( 0, 18, adcResult8);
+  byte val = map(ADCH, 0, 255, 0, 127);
+  u8g.drawBox(0, 28, val, 10);
 }
 
 void ST9720_Display()
