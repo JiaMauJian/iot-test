@@ -3,10 +3,16 @@
 * Adafruit_GPS.h有定義#define PGCMD_NOANTENNA "$PGCMD,33,0*6D" (因為我沒有天線)
 * GPS程式理解
 ````
-  //一直不斷讀取資料(字元)，一直到新的NMEA完整資料產生
+  // 一直不斷讀取資料(字元)，一直到新的NMEA完整資料產生
   while (!GPS.newNMEAreceived())
   {
     c = GPS.read();    
+  }
+  
+  // 可以看看Build an Arduino GPS Tracker影片30分鐘後半部，有說明為什麼要clearGPS
+  void clearGPS()
+  {
+    ...
   }
   
 ````
