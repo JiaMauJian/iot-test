@@ -6,6 +6,7 @@
 
 * 問題
 1. platformio燒錄ATtiny85試不出來，改用Arduino IDE
+2. stk500_recv(): programmer is not responding (1.板子選錯 2.用筆電燒錄程式沒問題，懷疑公司電腦因有ITAgent.exe在搞鬼，導致USB功能都怪怪的)
 
 * 電容
 1. 為什麼要加一顆電容?
