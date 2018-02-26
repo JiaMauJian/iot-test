@@ -15,4 +15,5 @@
 3. 電容有電池的概念在，但還是有差異(https://www.youtube.com/watch?v=LNci-13Bp1U)
 
 * 電容 Part2
-我加了1uF的電容，開啟Arduino IDE的Serial Monitor可以避免uno reset，但是燒錄ATtiny85時，就沒用了，還是會reset，是因為電容不夠大?
+1. 我加了1uF的電容，開啟Arduino IDE的Serial Monitor可以避免uno reset，但是燒錄ATtiny85時，就沒用了，還是會reset，是因為電容不夠大?
+2. 如果燒錄ATtiny不care uno reset不用電容也沒差
