@@ -19,6 +19,8 @@ RESET 10 -> RESET 1
 ```
 3. [參考網址](http://yehnan.blogspot.tw/2013/02/arduino-unoispbootloadersketchatmega328.html)一般的sketch燒錄到麵包板上的ATmega328P-PU晶片裡，有兩種做法，一是像老外的影片中示範將uno上的ATmega328P-PU晶片拔掉(bootloader與sketch共存，就跟平常使用Arduino板子時一樣)，二是直接使用保留燒錄bootloader的線路，board=ATmega328 on breadboard，Programmer=Arduino as ISP，用Sketch->Upload Using Programmer，如把Blink程式燒進去(燒錄sketch會蓋掉先前的bootloader)
 
+4. [ATmega328P腳位圖](https://m.ebay.in/itm/ATMEGA328P-PU-Microcontrolle-r-ARDUINO-UNO-R3-Bootloader-IC-Label-IC-Base-Free-/302372325617)
+
 # 燒錄遇到的問題
 * 這個訊息不用理會
 ```
