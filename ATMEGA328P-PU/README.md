@@ -42,3 +42,7 @@ Atmel的微控制器晶片都有個識別碼（device signature），譬如ATmeg
 
 http://yehnan.blogspot.tw/2013/02/arduino-unoispbootloadersketchatmega328.html
 ```
+* IDE板子選錯或是晶片壞了
+```
+avrdude: stk500_recv(): programmer is not responding
+```
