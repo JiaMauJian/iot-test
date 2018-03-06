@@ -1,5 +1,5 @@
 # 為什麼要燒錄ATMEGA328P-PU?
-在測試馬達的時候(HP Server上拔下來的)，好像把uno的板子搞壞，因在upload程式的出現底下錯誤訊息 (後計: 現在一塊uno，200元有找，下次如果還遇到怪怪的問題乾脆從買一塊好了)
+在測試馬達的時候(HP Server上拔下來的)，好像把uno的板子搞壞，因在upload程式的出現底下錯誤訊息 (後記: 現在一塊uno，200元有找，下次如果還遇到怪怪的問題乾脆從買一塊好了)
 
 ```
 avrdude: verification error, first mismatch at byte 0x0000
@@ -8,7 +8,7 @@ avrdude: verification error; content mismatch
 ```
 查了一下，好像只要把ATMEGA328P-PU的晶片換掉就好，但我用uno當ISP燒錄器有奇奇怪怪問題，板子壞得很徹底，還好手邊還有一塊之前專案留下的Mega 2560的板子可以拿來當ISP
 
-1. [參考網址](https://www.youtube.com/watch?v=cebMSJrNntI&t=12s) 不使用16 MHz crystal石英晶體燒錄程式，使用Arduino IDE 1.6.7搭配[breadboard-1-6-x.zip](https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard) (後計: 測試過Arduino IDE 1.8.5搭配breadboard-1-6-x，使用Upload Using Programmer也可以成功)
+1. [參考網址](https://www.youtube.com/watch?v=cebMSJrNntI&t=12s) 不使用16 MHz crystal石英晶體燒錄程式，使用Arduino IDE 1.6.7搭配[breadboard-1-6-x.zip](https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard) (後記: 測試過Arduino IDE 1.8.5搭配breadboard-1-6-x，使用Upload Using Programmer也可以成功)
 
 2. 把上面使用uno的部分換成mega，需注意腳位
 ```
