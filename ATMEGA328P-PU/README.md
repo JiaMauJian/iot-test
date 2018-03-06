@@ -10,18 +10,16 @@ avrdude: verification error; content mismatch
 
 1. [參考網址](https://www.youtube.com/watch?v=cebMSJrNntI&t=12s) 不使用16 MHz crystal石英晶體燒錄程式，使用Arduino IDE 1.6.7搭配[breadboard-1-6-x.zip](https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard) (後記: 測試過Arduino IDE 1.8.5搭配breadboard-1-6-x，使用Upload Using Programmer也可以成功)
 
-2. 把上面使用uno的部分換成mega，需注意腳位
+2. 把上面使用uno的部分換成mega，需注意腳位 先找Mega 2560是哪幾隻腳[Arduino as ISP and Arduino Bootloaders](https://www.arduino.cc/en/Tutorial/ArduinoISP)，再找ATmega328P是哪幾隻腳[ATmega328P腳位圖](https://m.ebay.in/itm/ATMEGA328P-PU-Microcontrolle-r-ARDUINO-UNO-R3-Bootloader-IC-Label-IC-Base-Free-/302372325617)
 ```
 Mega2560 -> atmega328p-pu
 
-MOSI 51 -> MOSI17
+MOSI 51 -> MOSI 17
 MISO 50 -> MISO 18
 SCK 52 -> SCK 19
 RESET 10 -> RESET 1
 ```
 3. [參考網址](http://yehnan.blogspot.tw/2013/02/arduino-unoispbootloadersketchatmega328.html)一般的sketch燒錄到麵包板上的ATmega328P-PU晶片裡，有兩種做法，一是像老外的影片中示範將uno上的ATmega328P-PU晶片拔掉(bootloader與sketch共存，就跟平常使用Arduino板子時一樣)，二是直接使用保留燒錄bootloader的線路，board=ATmega328 on breadboard，Programmer=Arduino as ISP，用Sketch->Upload Using Programmer，如把Blink程式燒進去(燒錄sketch會蓋掉先前的bootloader)
-
-4. [ATmega328P腳位圖](https://m.ebay.in/itm/ATMEGA328P-PU-Microcontrolle-r-ARDUINO-UNO-R3-Bootloader-IC-Label-IC-Base-Free-/302372325617)
 
 # 燒錄遇到的問題
 * 這個訊息不用理會
