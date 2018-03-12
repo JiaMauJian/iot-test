@@ -24,7 +24,7 @@ void loop() {
   Serial.print("Time for one revolution    = "); // 每一轉要花多少時間
   Serial.println(timeForOneRev);
 
-  double frequency = 1000000 / timeForOneRev; // 1 sec = 1000000 microsec 頻率等於每秒幾次
+  double frequency = 1000000 / timeForOneRev / p; // 1 sec = 1000000 microsec 頻率等於每秒幾次
   Serial.print("Frequency in Hz                    = ");
   Serial.println(frequency);
 
