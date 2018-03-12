@@ -25,11 +25,11 @@ void loop() {
   Serial.println(timeForOneRev);
 
   double frequency = 1000000 / timeForOneRev / p; // 1 sec = 1000000 microsec 頻率等於每秒幾次
-  Serial.print("Frequency in Hz                    = ");
+  Serial.print("Frequency in Hz            = ");
   Serial.println(frequency);
 
   double rpm = 60 * frequency;
-  Serial.print("RPM                                = ");
+  Serial.print("RPM                        = ");
   Serial.println(rpm, 0);
   Serial.println();
   Serial.println();
