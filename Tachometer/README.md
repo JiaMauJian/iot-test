@@ -28,6 +28,8 @@ double approxRollingAverage (double avg, double new_sample) {     ===>    voi
                                                                   ===>    }
 ```
 
-* 這種計算移動平均的方法真的很神奇
+* 這種計算移動平均的方法真的很神奇，EXCEL檔案有試算一版
 
-* EXCEL檔案有試算一版
+* 另一種寫法就是用矩陣的方式去計算移動平均，之前在玩ADC的時候有看過Arduino範例03.Analog->Smoothing，當時不太理解，現在回頭看就是移動平均法阿
+
+* 能否將該作者移動平均法改成指數移動平均呢? (靈感來字Keras作者一書中p.83，要Smoothing Validation MAE)
