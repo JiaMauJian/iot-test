@@ -5,7 +5,7 @@
 * 接線圖
     ![alt text](https://raw.githubusercontent.com/JiaMauJian/iot-test/master/DC-Brushless-TA350DC/TA350DC.png)
 
-* 示波器(轉速訊號)
+* 示波器(轉速訊號)，這邊有個錯誤，RPM應該還要除以pulse數，TA350DC的pulse數是2，RPM = 42.45 * 60 / 2 = 1274
 ![alt text](https://raw.githubusercontent.com/JiaMauJian/iot-test/master/DC-Brushless-TA350DC/TA350DC%E9%BB%83%E7%B7%9A%E8%BD%89%E9%80%9F%E8%A8%8A%E8%99%9F.jpg)
 
 # 程式說明 (請參考4wire_fan_ta350dc.ino)
