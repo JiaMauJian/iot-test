@@ -33,3 +33,14 @@ double approxRollingAverage (double avg, double new_sample) {     ===>    voi
 * 另一種寫法就是用矩陣的方式去計算移動平均，之前在玩ADC的時候有看過Arduino範例03.Analog->Smoothing，當時不太理解，現在回頭看就是移動平均法阿
 
 * 能否將該作者移動平均法改成指數移動平均呢? (靈感來字Keras作者一書中p.83，要Smoothing Validation MAE)
+```
+def smooth_curve(points, factor=0.9):
+  smoothed_points = []
+  for point in points:
+    if smoothed_points:
+      previous = smoothed_points[-1]
+      smoothed_points.append(previous * factor + point * (1 - factor))
+    else:
+      smoothed_points.append(point)
+  return smoothed_points
+```
