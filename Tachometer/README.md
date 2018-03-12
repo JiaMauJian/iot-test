@@ -29,3 +29,5 @@ double approxRollingAverage (double avg, double new_sample) {     ===>    voi
 ```
 
 * 這種計算移動平均的方法真的很神奇
+
+* EXCEL檔案有試算一版
