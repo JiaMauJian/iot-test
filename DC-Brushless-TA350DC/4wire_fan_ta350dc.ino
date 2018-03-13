@@ -8,7 +8,8 @@ int p = 2; //風扇轉一圈有幾個pulse
 
 void setup() {
   Serial.begin(9600);
-  pinMode(fanPulseSensorPin, INPUT_PULLUP);
+  //pinMode(fanPulseSensorPin, INPUT_PULLUP);
+  pinMode(fanPulseSensorPin, INPUT); //配合示波器量測轉速訊號，使用外部提升電阻
   pinMode(fanPwmPin, OUTPUT);
 }
 
