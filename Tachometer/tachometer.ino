@@ -13,10 +13,10 @@ int fakeFan_p = 1; //測試轉盤只有一個pulse
 
 void setup() {
   Serial.begin(9600);
-  pinMode(interruptPin, INPUT_PULLUP); //要接提升電阻10K，用INP
+  pinMode(interruptPin, INPUT_PULLUP); //使用內部提升電阻
   attachInterrupt(digitalPinToInterrupt(interruptPin), tach_interrupt, FALLING);
 
-  pinMode(fanPulseSensorPin, INPUT_PULLUP); //要接提升電阻10K，用INP
+  pinMode(fanPulseSensorPin, INPUT_PULLUP); //使用內部提升電阻
   pinMode(fanPwmPin, OUTPUT);
 }
 
