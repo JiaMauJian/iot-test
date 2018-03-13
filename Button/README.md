@@ -4,7 +4,7 @@
 
 * 某次看到這個影片[Electronic Basics #11: Sending SMS with Arduino](https://www.youtube.com/watch?v=gVGD-f8SQSI)，看到作者從Arudino?接了一條到SMS模組的按鈕上，用Arduino去控制這顆按鈕，痾~還有這一招
 
-![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Button/button.jpg?raw=true)
+![alt text](https://raw.githubusercontent.com/JiaMauJian/iot-test/master/Button/touchPin.jpg)
 
 * 實驗一，簡單接一個按鈕線路，然後用touchPin去模擬按鈕按下亮LED
 ```
