@@ -13,10 +13,11 @@ int fakeFan_p = 1; //測試轉盤只有一個pulse
 
 void setup() {
   Serial.begin(9600);
-  pinMode(interruptPin, INPUT_PULLUP); //使用內部提升電阻
+  pinMode(interruptPin, INPUT_PULLUP); //使用內部提升電阻20K
+  //pinMode(interruptPin, INPUT); //或是使用外部提升電阻10K (電阻大小會影響QRD1114 Sensor要感測的距離)
   attachInterrupt(digitalPinToInterrupt(interruptPin), tach_interrupt, FALLING);
 
-  pinMode(fanPulseSensorPin, INPUT_PULLUP); //使用內部提升電阻
+  pinMode(fanPulseSensorPin, INPUT_PULLUP); //使用內部提升電阻20K
   pinMode(fanPwmPin, OUTPUT);
 }
 
