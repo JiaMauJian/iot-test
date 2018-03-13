@@ -10,6 +10,9 @@
 * 示波器(轉速訊號)，這邊有個錯誤，頻率應該先除以pulse數，TA350DC的pulse數是2，freq = 42.45 / 2 = 21.23，RPM = 21.23 * 60 = 1274
 ![alt text](https://raw.githubusercontent.com/JiaMauJian/iot-test/master/DC-Brushless-TA350DC/TA350DC%E9%BB%83%E7%B7%9A%E8%BD%89%E9%80%9F%E8%A8%8A%E8%99%9F.jpg)
 
+* 輸出結果，freq = 21.74
+![alt text](https://raw.githubusercontent.com/JiaMauJian/iot-test/master/DC-Brushless-TA350DC/output.png)
+
 # 程式說明 (請參考4wire_fan_ta350dc.ino)
 * 頻率就是每秒幾次(圈)，那想像時鐘每分鐘(60秒)轉一圈經過60個刻度(次)，頻率就是60秒/60次=1Hz
 
