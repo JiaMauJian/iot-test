@@ -54,5 +54,5 @@ def smooth_curve(points, factor=0.9):
 ```
 n = 1/1-Beta, Beta = 0.9, n = 10筆取一次平均
 ```
-    * 原來如此
+    * 原來如此，影片最後有推導出e (我圖片只說了一半)
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Tachometer/EWA.png?raw=true)
