@@ -10,3 +10,16 @@
 * [PinOut腳位](http://wiki.stm32duino.com/index.php?title=File:Bluepillpinout.gif)
 
 * PWM (16-bit)
+```
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  pinMode(PA8, PWM);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  pwmWrite(PA8, 32768); //void pwmWrite(uint8 pin, uint16 duty_cycle)
+}
+```
+![alt text](https://github.com/JiaMauJian/iot-test/blob/master/STM32/pwm.jpg?raw=true)
