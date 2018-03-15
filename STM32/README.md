@@ -23,3 +23,5 @@ void loop() {
 }
 ```
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/STM32/pwm.jpg?raw=true)
+
+* 為什麼PWM頻率只有549.5(Hz)，因為T1C1預設值影響到PA8 (看PinOut)
