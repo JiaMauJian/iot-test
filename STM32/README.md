@@ -4,6 +4,8 @@
     * TX <-> A10
     * RX <-> A9
     * GND <-> GND
+    
+#### 燒錄前，切BOOT0 jump後按reset鍵，須注意板子上除了這三條，其他都不要接
 
 * 燒錄Pro Trinket也是一樣的線路，燒錄前要按一下reset進入呼吸燈狀態才可燒錄
 
