@@ -49,7 +49,10 @@ def smooth_curve(points, factor=0.9):
 ```
 
 # Andrew Ng對於Exponentially Weighted averages有更好的解釋
-* [58. Exponentially Weighted Averages](https://www.youtube.com/watch?v=wJBcz7FyLzg&list=PLBAGcD3siRDguyYYzhVwZ3tLvOyyG5k6K&index=58)這真的很有趣，我們可以用Beta可以用來反推是幾筆取一次平均
+* [58. Exponentially Weighted Averages](https://www.youtube.com/watch?v=wJBcz7FyLzg&list=PLBAGcD3siRDguyYYzhVwZ3tLvOyyG5k6K&index=58)
+    * 這真的很有趣，我們可以用Beta可以用來反推是幾筆取一次平均
 ```
 n = 1/1-Beta, Beta = 0.9, n = 10筆取一次平均
 ```
+    * 原來如此
+![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Tachometer/EWA.png?raw=true)
