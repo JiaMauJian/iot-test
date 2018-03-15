@@ -47,3 +47,9 @@ def smooth_curve(points, factor=0.9):
       smoothed_points.append(point)
   return smoothed_points
 ```
+
+# Andrew Ng對於Exponentially Weighted averages有更好的解釋
+* [58. Exponentially Weighted Averages](https://www.youtube.com/watch?v=wJBcz7FyLzg&list=PLBAGcD3siRDguyYYzhVwZ3tLvOyyG5k6K&index=58)Beta可以用來反推是幾筆取一次平均
+```
+n = 1/1-Beta, Beta = 0.9, n = 10筆取一次平均
+```
