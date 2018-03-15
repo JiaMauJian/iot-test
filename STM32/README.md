@@ -7,4 +7,6 @@
 
 * 燒錄Pro Trinket也是一樣的線路，燒錄前要按一下reset進入呼吸燈狀態才可燒錄
 
-* [腳位](http://wiki.stm32duino.com/index.php?title=File:Bluepillpinout.gif)
+* [PinOut腳位](http://wiki.stm32duino.com/index.php?title=File:Bluepillpinout.gif)
+
+* PWM (16-bit)
