@@ -2,10 +2,12 @@
 
 * 之前不太懂指數平均法的概念，只知道調factor(也有叫alpha, beta反正就是這個EWA有一個參數可以調)，但後來看見Andrew Ng在Youtube上Deep Learning的課程介紹Exponentially Weighted averages(EWA)，才發現他真的講得很清楚，甚至看完才了解當初李宏毅老師講的RMSprop、Adam都有EWA的精神
 
-* [58. Exponentially Weighted Averages](https://www.youtube.com/watch?v=wJBcz7FyLzg&list=PLBAGcD3siRDguyYYzhVwZ3tLvOyyG5k6K&index=58)
+* [58. Exponentially Weighted Averages](https://www.youtube.com/watch?v=wJBcz7FyLzg)
 
-1. 這真的很有趣，我們可以用Beta可以用來反推是幾筆取一次平均
+這真的很有趣，我們可以用Beta可以用來反推是幾筆取一次平均
 ```
 n = 1/1-Beta, Beta = 0.9, n = 10筆取一次平均
 ```
+
+[59. Understanding Exponentially Weighted Averages](https://www.youtube.com/watch?v=WJb-QVd54vw)
 
