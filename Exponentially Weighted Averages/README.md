@@ -6,11 +6,10 @@
 
 這真的很有趣，我們可以用Beta可以用來反推是幾筆取一次平均
 ```
-n = 1/1-Beta, Beta = 0.9, n = 10筆取一次平均
+n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
 ```
 
 * [59. Understanding Exponentially Weighted Averages](https://www.youtube.com/watch?v=WJb-QVd54vw)
 
-原來Exponentially是這樣來的
+原來Exponentially是這樣來的，還解釋了 n = 1 / 1-Beta是怎麼來的
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/ewa.png?raw=true)
-
