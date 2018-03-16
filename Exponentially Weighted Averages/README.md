@@ -9,5 +9,8 @@
 n = 1/1-Beta, Beta = 0.9, n = 10筆取一次平均
 ```
 
-[59. Understanding Exponentially Weighted Averages](https://www.youtube.com/watch?v=WJb-QVd54vw)
+* [59. Understanding Exponentially Weighted Averages](https://www.youtube.com/watch?v=WJb-QVd54vw)
+
+原來Exponentially是這樣來的
+![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/ewa.png?raw=true)
 
