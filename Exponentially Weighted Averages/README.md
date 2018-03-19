@@ -15,4 +15,8 @@ n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/ewa.png?raw=true)
 
 * [60. Bias Correction](https://www.youtube.com/watch?v=Zs4qJN-I5Kk)
-會使用Bias Correction是在很Care初期EWA的預算結果，如果不Care初期幾筆運算的結果，也可以等跑個幾筆就跟原始EWA的運算結果一樣
+會使用Bias Correction是在很Care初期EWA的預算結果，如果不Care初期幾筆運算的結果，也可以等跑個幾筆就跟原始(紫線)EWA的運算結果一樣
+紫線沒有使用Bias Correction，綠線有使用Bias Correction
+![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/bias%20correction.png?raw=true)
+[Coursera | Andrew Ng (02-week-2-2.5)— 指数加权平均的偏差修正](http://blog.csdn.net/JUNJUN_ZHAO/article/details/79099040)
+
