@@ -15,8 +15,16 @@ n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/ewa.png?raw=true)
 
 * [60. Bias Correction](https://www.youtube.com/watch?v=Zs4qJN-I5Kk)
-會使用Bias Correction是在很Care初期EWA的預算結果，如果不Care初期幾筆運算的結果，也可以等跑個幾筆就跟原始(紫線)EWA的運算結果一樣
-紫線沒有使用Bias Correction，綠線有使用Bias Correction
+    * 會使用Bias Correction是在很Care初期EWA的預算結果，如果不Care初期幾筆運算的結果，也可以等跑個幾筆就跟原始(紫線)EWA的運算結果一樣
+    * 紫線沒有使用Bias Correction，綠線有使用Bias Correction
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/bias%20correction.png?raw=true)
 [Coursera | Andrew Ng (02-week-2-2.5)— 指数加权平均的偏差修正](http://blog.csdn.net/JUNJUN_ZHAO/article/details/79099040)
+
+* Bias Correction實作一直有問題，後來參考這篇文章後[The correct way to start an Exponential Moving Average (EMA)](https://blog.fugue88.ws/archives/2017-01/The-correct-way-to-start-an-Exponential-Moving-Average-EMA)，才找到錯誤，請看程式內說明
+    * 從0或是資料的第一筆資料當起始計算點都不太正確
+    * 通過EWA公式的展開，可以計算出3筆資料 (3, 4 ,5)之正確的EWA，Wiki有[展開公式](https://en.wikipedia.org/wiki/Moving_average)
+    * 作者loop中計算extra <<- r*extra 其實就是計算beta^t
+    * 最後1-extra就是1-beta^t
+    
+* 為什麼要1-beta^t，從3,4,5那個簡單的例子得知，我們必須將分母額外權重(extra weights)把它除掉，不太能理解
 
