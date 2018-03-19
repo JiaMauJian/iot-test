@@ -13,3 +13,6 @@ n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
 
 原來Exponentially是這樣來的，還解釋了 n = 1 / 1-Beta是怎麼來的
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/ewa.png?raw=true)
+
+* [60. Bias Correction](https://www.youtube.com/watch?v=Zs4qJN-I5Kk)
+會使用Bias Correction是在很Care初期EWA的預算結果，如果不Care初期幾筆運算的結果，也可以等跑個幾筆就跟原始EWA的運算結果一樣
