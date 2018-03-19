@@ -38,8 +38,8 @@ def ewa_init_bias_correction(points, factor=0.9):
         bias = bias * factor
         ewa = previous_point * factor + point * (1 - factor)
         #print ewa / (1-bias)
-        smoothed_points.append(ewa)
-        smoothed_points_with_bias_corr.append(ewa / (1-bias))
+        smoothed_points.append(ewa) #我debug很久的地方，因為我把ewa / (1-bias)存進去導致結果錯誤 (X)smoothed_points.append(ewa/(1-bias))
+        smoothed_points_with_bias_corr.append(ewa / (1-bias)) # bias corr的結果要另外存，避免影響到ewa的計算
     return smoothed_points_with_bias_corr
 
 with open('data1.txt') as f:
