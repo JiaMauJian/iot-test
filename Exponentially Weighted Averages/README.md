@@ -3,31 +3,22 @@
 * 之前不太懂指數平均法的概念，只知道調factor(也有叫alpha, beta反正就是這個EWA有一個參數可以調)，但後來看見Andrew Ng在Youtube上Deep Learning的課程介紹Exponentially Weighted averages(EWA)，才發現他真的講得很清楚，甚至看完才了解當初李宏毅老師講的RMSprop、Adam都有EWA的精神
 
 * [58. Exponentially Weighted Averages](https://www.youtube.com/watch?v=wJBcz7FyLzg)
-
 這真的很有趣，我們可以用Beta可以用來反推是幾筆取一次平均
 ```
 n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
 ```
 
 * [59. Understanding Exponentially Weighted Averages](https://www.youtube.com/watch?v=WJb-QVd54vw)
-
 原來Exponentially是這樣來的，還解釋了 n = 1 / 1-Beta是怎麼來的
-![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/ewa.png?raw=true)
 
 * [60. Bias Correction](https://www.youtube.com/watch?v=Zs4qJN-I5Kk)
     * 會使用Bias Correction是在很Care初期EWA的預算結果，如果不Care初期幾筆運算的結果，也可以等跑個幾筆就跟原始(紫線)EWA的運算結果一樣
     * 紫線沒有使用Bias Correction，綠線有使用Bias Correction
     * In practice: most people don't bother to implement bias correction — just wait for the initial phase to warm up...
-![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/bias%20correction.png?raw=true)
-[Coursera | Andrew Ng (02-week-2-2.5)— 指数加权平均的偏差修正](http://blog.csdn.net/JUNJUN_ZHAO/article/details/79099040)
+    * [Coursera | Andrew Ng (02-week-2-2.5)— 指数加权平均的偏差修正](http://blog.csdn.net/JUNJUN_ZHAO/article/details/79099040)
 
 * Bias Correction實作一直有問題，後來參考這篇文章後[The correct way to start an Exponential Moving Average (EMA)](https://blog.fugue88.ws/archives/2017-01/The-correct-way-to-start-an-Exponential-Moving-Average-EMA)，才找到錯誤，請看程式內說明
-    * 從0或是資料的第一筆資料當起始計算點都不太正確
-    * 通過EWA公式的展開，可以計算出3筆資料 (3, 4 ,5)之正確的EWA，Wiki有[展開公式](https://en.wikipedia.org/wiki/Moving_average)
-    * 作者loop中計算extra <<- r*extra 其實就是計算beta^t
-    * 最後1-extra就是1-beta^t
+    * 作者loop中計算extra <<- r*extra 其實就是計算beta^t
+    * 最後1-extra就是1-beta^t
     
-* 為什麼要1-beta^t，從3,4,5那個簡單的例子得知，我們必須將分母額外權重(extra weights)把它除掉 (不太能理解)
-
-* 随着 t 增加，β 的 t 次方将接近于 0，所以当 t 很大的时候，1-β偏差修正几乎没有作用，因此当t较大的时候，紫线基本和绿线重合了
-![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/beta.png?raw=true)
+* 為什麼要1-beta^t
