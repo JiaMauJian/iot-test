@@ -26,5 +26,5 @@ n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
 
 * EMA計算方式
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/EMA%E8%A8%88%E7%AE%971.png)
-* 
+* 看個影片了解一下[weighted average](https://www.youtube.com/watch?v=slFqL86q3EA)，底下EMA的公式也是這種概念
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/EMA%E8%A8%88%E7%AE%972.png)
