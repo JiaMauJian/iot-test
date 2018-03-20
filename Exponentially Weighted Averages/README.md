@@ -20,5 +20,10 @@ n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
 * Bias Correction實作一直有問題，後來參考這篇文章後[The correct way to start an Exponential Moving Average (EMA)](https://blog.fugue88.ws/archives/2017-01/The-correct-way-to-start-an-Exponential-Moving-Average-EMA)，才找到錯誤，請看程式內說明ewa/ewa2.py
     * 作者loop中計算extra <<- r*extra 其實就是計算beta^t
     * 最後1-extra就是1-beta^t
-    
-* 為什麼要1-beta^t
+
+* 一種同除的概念???
+![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/bias-correction.png)
+
+* EMA計算方式
+![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/EMA%E8%A8%88%E7%AE%971.png)
+![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/EMA%E8%A8%88%E7%AE%972.png)
