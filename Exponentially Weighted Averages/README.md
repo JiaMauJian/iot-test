@@ -21,9 +21,10 @@ n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
     * 作者loop中計算extra <<- r*extra 其實就是計算beta^t
     * 最後1-extra就是1-beta^t
 
-* 一種同除的概念???
+* 一種同除的概念??? (係數相加後等同分母的數值，有趣)
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/bias-correction.png)
 
 * EMA計算方式
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/EMA%E8%A8%88%E7%AE%971.png)
+* 
 ![alt text](https://github.com/JiaMauJian/iot-test/blob/master/Exponentially%20Weighted%20Averages/EMA%E8%A8%88%E7%AE%972.png)
