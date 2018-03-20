@@ -17,7 +17,7 @@ n = 1 / 1-Beta, Beta = 0.9, n = 10筆取一次平均
     * In practice: most people don't bother to implement bias correction — just wait for the initial phase to warm up...
     * [Coursera | Andrew Ng (02-week-2-2.5)— 指数加权平均的偏差修正](http://blog.csdn.net/JUNJUN_ZHAO/article/details/79099040)
 
-* Bias Correction實作一直有問題，後來參考這篇文章後[The correct way to start an Exponential Moving Average (EMA)](https://blog.fugue88.ws/archives/2017-01/The-correct-way-to-start-an-Exponential-Moving-Average-EMA)，才找到錯誤，請看程式內說明
+* Bias Correction實作一直有問題，後來參考這篇文章後[The correct way to start an Exponential Moving Average (EMA)](https://blog.fugue88.ws/archives/2017-01/The-correct-way-to-start-an-Exponential-Moving-Average-EMA)，才找到錯誤，請看程式內說明ewa/ewa2.py
     * 作者loop中計算extra <<- r*extra 其實就是計算beta^t
     * 最後1-extra就是1-beta^t
     
