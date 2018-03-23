@@ -1,3 +1,5 @@
+* 這是用Trinket虛擬鍵盤的範例 (同理可以虛擬滑鼠或是任何USB1.1的裝置)
+
 * Arduino IDE
     * Board: Pro Trinket 5V/16MHz (USB)
     * Programmer: USBtinyISP
