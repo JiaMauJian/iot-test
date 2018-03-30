@@ -4,4 +4,4 @@
 * [Capacitance Meter](https://www.arduino.cc/en/Tutorial/CapacitanceMeter)
     * 線路接法
     * 程式參考
-* 補示波器與線路照片
+* 教學影片[Arduino capacitane meter](https://www.youtube.com/watch?v=8yGbOlJ7ZWM)
