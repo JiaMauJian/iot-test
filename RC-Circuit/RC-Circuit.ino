@@ -1,3 +1,5 @@
+// ref: https://www.arduino.cc/en/Tutorial/CapacitanceMeter
+
 // Initialize Pins
 int chargePin = 12;
 int dischargePin = 11; //speeds up discharging process, not necessary though
@@ -25,7 +27,7 @@ void loop()
   digitalWrite(chargePin, HIGH); // Begins charging the capacitor
   startTime = millis(); // Begins the timer
   
-  while(analogRead(A0) < 648) // 1023 * 0.632
+  while(analogRead(A0) < 648) // 1024 * 0.632
   {       
     // Does nothing until capacitor reaches 63.2% of total voltage 
   }
