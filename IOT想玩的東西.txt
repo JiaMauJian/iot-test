@@ -1,0 +1,28 @@
+Power Meter
+►938◄INA219 I2C 介面零漂移 雙向電流 電源監控感測器模組感測器
+►99◄Micro SD卡模組 SPI介面 迷你TF卡讀寫 Arduino 有電位元轉換晶片 $38
+►583◄8X8MM 8*8MM 自鎖 6P2T有段開關 按鍵 按鈕 雙排六腳 直插 $3 * 2
+
+Multi-Tasking
+►52◄輝盛SG90 Tower Pro 1.8Kg扭力 伺服馬達 舵機 9克伺服機 $42 * 2
+►556◄NeoPixel Stick 8位WS2812 5050 RGB LED 內置全彩驅動彩燈開發板 $85
+►573◄CJMCU 16位 WS2812 5050 RGB LED 內置全彩驅動彩燈 圓形開發板Arduino $145
+►494◄白色 OLED顯示幕 0.96寸 12864 IIC I2C 4針 Arduino STM32 C51 XL1
+
+Level
+►570◄MPU9250 9DOF 九軸 9軸姿態 加速度 陀螺儀 指南針磁場感測器 $160
+
+秤重 (等部門有預算再買?)
+►592◄5KG 10斤 電子秤 DIY ARDUINO 稱重感測器 套件 精度HX711 模組
+
+行動電源 (等部門有預算再買?)
+►211◄18650 鋰電池充電與保護一體板充電保護二合一 過充過放保護 TP40561 $30
+►12◄DC-DC升壓模塊轉換器 0.9V~5V 升5V 鋰電池 USB 升壓模組 DIY手機移動電源 $18
+B U Y 3 6 0
+18650電池3.7V轉5V2A升壓模組 DIY充電寶/移動電源主板/電路板 w7 056 [5059640] $70
+
+Other
+►305◄USB轉TTL 支援 3.3V 5V FT232RL Arduino 專用 mini USB介面 $115
+►931◄1位 圓形 WS2812B RGB LED Breakout 全彩驅動 彩燈 智慧控制模組 $20
+►115◄Arduino 9V 電池扣含線12CM 連接 DC2.1電源插頭 Arduino UNO 均適用
+
